@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakebuk</title>
+    <link rel="stylesheet" href="vu2.css">
+</head>
+<body>
+
+    <div id="dongho">
+        <h1>THỜI GIAN BÂY GIỜ LÀ:</h1>
+        <div id="thoigian">
+            <div>
+                <span id="gio">00 </span><span>gio</span>
+
+            </div>
+            <div>
+                <span id="phut">00</span><span>phut</span>
+
+            </div>
+            <div>
+                <span id="giay">00</span><span>giay</span>
+            </div>
+        </div>
+
+    </div>
+
+</html>
+<script>
+    function Dong_ho() {
+        var gio = document.getElementById("gio");
+        var phut = document.getElementById("phut");
+        var giay = document.getElementById("giay");
+        var Gio_hien_tai = new Date().getHours();
+        var Phut_hien_tai = new Date().getMinutes();
+        var Giay_hien_tai = new Date().getSeconds();
+        gio.innerHTML = Gio_hien_tai;
+        phut.innerHTML = Phut_hien_tai;
+        giay.innerHTML = Giay_hien_tai;
+    }
+   var Dem_gio = setInterval(Dong_ho, 1000);
+</script>
